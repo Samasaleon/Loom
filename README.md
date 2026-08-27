@@ -18,16 +18,20 @@ Template(blog) imports an existing *blog.json* template and returns it as a temp
 
 For example:
 
+```
 Template(blog)
     .title(My Blog)
     .style({
     theme: dark
     });
+```
 
 To create a completely new template, Loom provides a blank template:
 
+```
 Template(new)
     .title(My Website);
+```
 
 The resulting template can then be configured using Loom's methods.
 
@@ -41,6 +45,7 @@ A template is represented by a **JSON** file containing the information Loom nee
 
 A very simple template might look like:
 
+```
 {
     name: blog,
     type: website,
@@ -49,6 +54,7 @@ A very simple template might look like:
     theme: light
     }
 }
+```
 
 The JSON format is intentionally simple during early development.
 
@@ -60,12 +66,14 @@ Loom is designed around method chaining.
 
 A template can be progressively configured:
 
+```
 Template(blog)
     .title(My Blog)
     .style({
     theme: *dark*
     })
     .description(*A personal blog*);
+```
 
 The goal is for template configuration to read almost like a description of the project.
 
@@ -73,15 +81,15 @@ The goal is for template configuration to read almost like a description of the 
 
 There are two basic ways to work with templates.
 
-Import an existing template
+### Import an existing template
 
-### Template(blog)
+```Template(blog)```
 
 This loads the existing *blog.json* template.
 
 ### Create a new template
 
-Template(new)
+```Template(new)```
 
 This loads a blank template that can be configured from scratch.
 
@@ -104,12 +112,12 @@ The first versions will focus on establishing:
 
  The template JSON structure
 
- Template importing
- Blank template creation
- The Template() function
- Basic template methods
- Method chaining
- Exporting the modified template
+- Template importing
+- Blank template creation
+- The Template() function
+- Basic template methods
+- Method chaining
+- Exporting the modified template
 
 More advanced features should only be added once this foundation is stable.
 
@@ -117,11 +125,13 @@ More advanced features should only be added once this foundation is stable.
 
 A future Loom workflow could look something like:
 
+```
 Template(blog)
     .title(My Personal Blog)
     .style({
     theme: dark
     })
     .author(John);
+```
 
 Loom would then use the resulting template object to produce the configured project.

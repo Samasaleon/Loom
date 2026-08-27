@@ -1,20 +1,20 @@
 # Loom
 
-Loom is a JavaScript library for creating and editing website and web application templates through a simple, chainable *API*.
+Loom is a JavaScript library for creating and editing website and web application templates through a simple, chainable API.
 
 Instead of manually editing a template's files and configuration, Loom lets you import a template as an object and modify it using JavaScript.
 
 ## Status
 
-Loom is currently in early development (*v0.0.0*).
+Loom is currently in early development (v0.0.0).
 
-The **API** and template format are experimental and may change.
+The API and template format are experimental and may change.
 
 ## Concept
 
 Loom is built around a simple idea:
 
-Template(blog) imports an existing *blog.json* template and returns it as a template object that can be edited.
+Template(blog) imports an existing blog.json template and returns it as a template object that can be edited.
 
 For example:
 
@@ -41,7 +41,7 @@ A Loom project may contain templates such as:
 
 templates/ ├── blog.json ├── portfolio.json └── landing-page.json
 
-A template is represented by a **JSON** file containing the information Loom needs to construct the website or application.
+A template is represented by a JSON file containing the information Loom needs to construct the website or application.
 
 A very simple template might look like:
 
@@ -70,9 +70,9 @@ A template can be progressively configured:
 Template(blog)
     .title(My Blog)
     .style({
-    theme: *dark*
+    theme: dark
     })
-    .description(*A personal blog*);
+    .description(A personal blog);
 ```
 
 The goal is for template configuration to read almost like a description of the project.
@@ -85,7 +85,7 @@ There are two basic ways to work with templates.
 
 ```Template(blog)```
 
-This loads the existing *blog.json* template.
+This loads the existing blog.json template.
 
 ### Create a new template
 
